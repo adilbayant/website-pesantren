@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponpes Tahfidz Alif Alfi Karomah | Yatim & Dhu'afa</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            50: '#f0fdf4',
+                            500: '#10b981',
+                            600: '#059669',
+                            900: '#064e3b',
+                        },
+                        gold: {
+                            500: '#D4AF37',
+                            600: '#B8860B',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #f8fafc;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(6, 78, 59, 0.7), rgba(6, 78, 59, 0.85)), url('img/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.1), 0 8px 10px -6px rgba(16, 185, 129, 0.1);
+        }
+        .rounded-custom {
+            border-radius: 2.5rem;
+        }
+        /* Fallback logo jika gambar belum ada */
+        .logo-box {
+            background: white;
+            border: 2px solid #D4AF37;
+        }
+    </style>
+</head>
+<body class="text-emerald-900 overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <nav class="glass-nav sticky top-0 z-50 border-b border-emerald-100">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-xl logo-box flex items-center justify-center overflow-hidden shadow-sm">
+                    <img src="img/logo.png" alt="Logo" class="w-full h-full object-contain" onerror="this.src='https://ui-avatars.com/api/?name=Alif+Alfi&background=064e3b&color=fff'">
+                </div>
+                <div>
+                    <h1 class="font-serif font-bold text-lg md:text-xl leading-none text-emerald-900">ALIF ALFI KAROMAH</h1>
+                    <p class="text-[10px] md:text-xs text-emerald-600 uppercase tracking-[0.2em] mt-1 font-bold">Tahfidz Yatim & Dhu'afa</p>
+                </div>
+            </div>
+            
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex items-center space-x-8 font-semibold">
+                <a href="index.html" class="text-emerald-600">Beranda</a>
+                <a href="profil.html" class="hover:text-emerald-500 transition">Profil</a>
+                <a href="monitoring.html" class="hover:text-emerald-500 transition font-medium">Monitoring Santri</a>
+                <a href="donasi.html" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2.5 rounded-full shadow-lg shadow-emerald-200 transition">Donasi</a>
+            </div>
+
+            <!-- Menu Mobile Button -->
+            <button class="md:hidden text-emerald-900 text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-gradient min-h-[600px] flex items-center relative text-white">
+        <div class="max-w-6xl mx-auto px-6 py-20 w-full relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 mb-6">
+                    <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+                    <span class="text-xs md:text-sm font-medium tracking-wide">Penerimaan Santri Baru Telah Dibuka</span>
+                </div>
+                <h2 class="text-4xl md:text-7xl font-serif font-bold mb-6 leading-[1.1]">
+                    Menempa Jiwa dengan <span class="text-emerald-300">Cahaya Al-Qur'an</span>
+                </h2>
+                <p class="text-lg md:text-xl text-emerald-50/90 mb-10 leading-relaxed font-light">
+                    Mewujudkan masa depan gemilang bagi santri yatim dan dhu'afa melalui hafalan Al-Qur'an, pemahaman kitab, dan adab islami dalam lingkungan yang asri dan nyaman.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="donasi.html" class="bg-emerald-500 hover:bg-emerald-600 text-white px-10 py-4 rounded-full font-bold text-lg shadow-2xl transition hover:-translate-y-1">
+                        <i class="fas fa-hand-holding-heart mr-2"></i> Infaq & Sedekah
+                    </a>
+                    <a href="profil.html" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-10 py-4 rounded-full font-bold text-lg transition">
+                        Kenali Kami Lebih Dekat
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Ornamen hiasan bawah -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#f8fafc" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,149.3C672,149,768,203,864,224C960,245,1056,235,1152,208C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- QUOTE SECTION -->
+    <section class="py-10 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-6 text-center italic text-emerald-800">
+            <p class="text-xl md:text-2xl font-serif">
+                "Sebaik-baik kalian adalah orang yang belajar Al-Qur'an dan mengajarkannya."
+            </p>
+            <p class="mt-4 font-bold text-emerald-600">— HR. Bukhari</p>
+        </div>
+    </section>
+
+    <!-- PROGRAM UNGGULAN -->
+    <section class="py-24 bg-[#f8fafc]">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div class="max-w-xl">
+                    <span class="text-emerald-500 font-bold tracking-[0.3em] uppercase text-xs">Fokus Pendidikan</span>
+                    <h3 class="text-3xl md:text-4xl font-serif font-bold mt-2">Program Utama Santri</h3>
+                    <p class="text-gray-500 mt-4 leading-relaxed">Kami merancang kurikulum yang seimbang antara menghafal Al-Qur'an, pemahaman agama, dan pembentukan karakter mandiri.</p>
+                </div>
+                <a href="#" class="text-emerald-600 font-bold border-b-2 border-emerald-200 hover:border-emerald-600 transition pb-1">Lihat Semua Kegiatan</a>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Program 1 -->
+                <div class="bg-white p-10 rounded-custom card-shadow border border-emerald-50 transition-all hover:-translate-y-2 group">
+                    <div class="w-20 h-20 bg-emerald-50 text-emerald-500 rounded-[2rem] flex items-center justify-center text-3xl mb-8 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                        <i class="fas fa-quran"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Tahfidzul Qur'an</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Fokus hafalan mutqin dengan metode Tikrar dan bimbingan talaqqi langsung oleh asatidz hafidz 30 Juz.</p>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="bg-white p-10 rounded-custom card-shadow border border-emerald-50 transition-all hover:-translate-y-2 group">
+                    <div class="w-20 h-20 bg-emerald-50 text-emerald-500 rounded-[2rem] flex items-center justify-center text-3xl mb-8 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Beasiswa Yatim</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Fasilitas pendidikan, asrama, dan konsumsi 100% gratis bagi anak-anak yatim dan dhu'afa yang berazam menjadi hafidz.</p>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="bg-white p-10 rounded-custom card-shadow border border-emerald-50 transition-all hover:-translate-y-2 group">
+                    <div class="w-20 h-20 bg-emerald-50 text-emerald-500 rounded-[2rem] flex items-center justify-center text-3xl mb-8 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                        <i class="fas fa-mosque"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Kajian Turats</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed text-gray-500">Pendalaman kitab kuning (Fathul Qorib, Ta'lim Muta'allim, dll) untuk membentuk pemahaman agama yang moderat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / DONASI SECTION -->
+    <section class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="bg-emerald-900 rounded-custom overflow-hidden shadow-2xl flex flex-col md:flex-row">
+                <div class="md:w-1/2 p-12 md:p-20 text-white">
+                    <h3 class="text-3xl md:text-5xl font-serif font-bold mb-6 leading-tight">Wujudkan Rumah Penghafal Qur'an</h3>
+                    <p class="text-emerald-100/80 mb-10 text-lg">Bantuan Anda adalah harapan bagi para santri yatim untuk terus belajar dan menghafal tanpa perlu memikirkan biaya.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="donasi.html" class="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-full font-bold text-center shadow-lg transition">Donasi Sekarang</a>
+                        <a href="https://wa.me/628123456789" class="bg-emerald-800 border border-emerald-700 hover:bg-emerald-700 text-white px-8 py-4 rounded-full font-bold text-center transition">Hubungi Admin</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 bg-emerald-800/30 flex items-center justify-center p-12 min-h-[300px] border-l border-emerald-800">
+                    <div class="text-center">
+                        <p class="text-emerald-300 font-bold uppercase tracking-widest text-xs mb-4">Rekening Resmi</p>
+                        <div class="bg-white p-8 rounded-3xl shadow-xl">
+                            <p class="text-emerald-900 font-bold text-xs uppercase tracking-tighter opacity-50 mb-1">Bank Syariah Indonesia (BSI)</p>
+                            <h4 class="text-3xl font-bold text-emerald-900 mb-2">712 3456 789</h4>
+                            <p class="text-emerald-600 text-sm font-medium italic italic">a.n Ponpes Tahfidz Alif Alfi Karomah</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white pt-20 pb-10 border-t border-emerald-50">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12 mb-16">
+            <div>
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 rounded-lg logo-box flex items-center justify-center overflow-hidden">
+                        <img src="img/logo.png" class="w-full h-full object-contain" onerror="this.src='https://ui-avatars.com/api/?name=A+A&background=064e3b&color=fff'">
+                    </div>
+                    <span class="font-serif font-bold text-xl">ALIF ALFI KAROMAH</span>
+                </div>
+                <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                    Mencetak hafidz-hafidzah yang tidak hanya hafal Al-Qur'an, namun juga berkarakter mulia dan mandiri.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center hover:bg-emerald-600 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center hover:bg-emerald-600 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center hover:bg-emerald-600 hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h5 class="font-bold mb-6 text-emerald-900">Tautan Cepat</h5>
+                <ul class="space-y-4 text-gray-500 text-sm">
+                    <li><a href="profil.html" class="hover:text-emerald-600 transition">Profil & Sejarah</a></li>
+                    <li><a href="monitoring.html" class="hover:text-emerald-600 transition">Monitoring Progres Hafalan</a></li>
+                    <li><a href="donasi.html" class="hover:text-emerald-600 transition">Laporan Keuangan Donasi</a></li>
+                    <li><a href="#" class="hover:text-emerald-600 transition">Pendaftaran Santri Baru</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h5 class="font-bold mb-6 text-emerald-900">Alamat & Kontak</h5>
+                <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                    Jl. Alamat Contoh No. 123, Kelurahan, Kecamatan, Kota, Provinsi 12345
+                </p>
+                <p class="text-gray-500 text-sm mb-2"><i class="fas fa-phone text-emerald-500 mr-2"></i> +62 812-3456-7890</p>
+                <p class="text-gray-500 text-sm"><i class="fas fa-envelope text-emerald-500 mr-2"></i> info@alifalfikaromah.or.id</p>
+            </div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto px-6 pt-10 border-t border-emerald-50 text-center text-gray-400 text-xs">
+            <p>&copy; 2026 Yayasan Ponpes Alif Alfi Karomah. Khidmat untuk ummat ❤️</p>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/628123456789" target="_blank" class="fixed bottom-8 right-8 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all z-[999] hover:rotate-6">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+</body>
+</html>

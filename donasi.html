@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donasi & Infaq | Ponpes Alif Alfi Karomah</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            50: '#f0fdf4',
+                            500: '#10b981',
+                            600: '#059669',
+                            900: '#064e3b',
+                        },
+                        gold: {
+                            500: '#D4AF37',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #f8fafc; }
+        .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); }
+        .rounded-custom { border-radius: 2.5rem; }
+        .card-shadow { box-shadow: 0 15px 30px -10px rgba(16, 185, 129, 0.1); }
+        .donasi-header {
+            background: linear-gradient(135deg, #064e3b 0%, #059669 100%);
+        }
+    </style>
+</head>
+<body class="text-emerald-900">
+
+    <!-- NAVBAR -->
+    <nav class="glass-nav sticky top-0 z-50 border-b border-emerald-100">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-lg border-2 border-gold-500 flex items-center justify-center bg-white overflow-hidden shadow-sm">
+                    <img src="img/logo.png" alt="Logo" class="w-full h-full object-contain" onerror="this.src='https://ui-avatars.com/api/?name=Alif+Alfi&background=064e3b&color=fff'">
+                </div>
+                <h1 class="font-serif font-bold text-lg leading-none hidden sm:block uppercase tracking-tight">ALIF ALFI KAROMAH</h1>
+            </div>
+            <div class="flex items-center space-x-6 font-semibold text-sm">
+                <a href="index.html" class="hover:text-emerald-600 transition">Beranda</a>
+                <a href="profil.html" class="hover:text-emerald-600 transition">Profil</a>
+                <a href="monitoring.html" class="hover:text-emerald-500 transition">Monitoring</a>
+                <a href="donasi.html" class="text-emerald-600 border-b-2 border-emerald-600 pb-1">Donasi</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="donasi-header py-20 text-white text-center px-6 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto relative z-10">
+            <h2 class="text-4xl md:text-5xl font-serif font-bold mb-4">Investasi Akhirat</h2>
+            <p class="text-emerald-50 opacity-90 max-w-xl mx-auto font-light leading-relaxed">
+                Setiap rupiah yang Anda infaqkan menjadi wasilah bagi santri yatim dhu'afa untuk menghafal ayat-ayat suci Al-Qur'an.
+            </p>
+        </div>
+        <!-- Dekorasi -->
+        <div class="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-6xl mx-auto px-6 py-16 -mt-10">
+        <div class="grid lg:grid-cols-3 gap-12">
+            
+            <!-- INSTRUKSI DONASI -->
+            <div class="lg:col-span-2 space-y-8">
+                <div class="bg-white p-8 md:p-12 rounded-custom card-shadow border border-emerald-50">
+                    <h3 class="text-2xl font-serif font-bold mb-6 flex items-center">
+                        <i class="fas fa-university text-gold-500 mr-4"></i> Metode Pembayaran
+                    </h3>
+                    <p class="text-gray-500 mb-8 text-sm leading-relaxed">Silakan transfer donasi Anda melalui nomor rekening resmi yayasan di bawah ini. Pastikan Anda melakukan konfirmasi setelah transfer.</p>
+                    
+                    <!-- Kartu Rekening -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="p-6 rounded-3xl bg-emerald-50 border border-emerald-100 relative group">
+                            <img src="https://upload.wikimedia.org/wikipedia/id/thumb/a/a0/Bank_Syariah_Indonesia_logo.svg/1200px-Bank_Syariah_Indonesia_logo.svg.png" alt="BSI" class="h-6 mb-4 grayscale group-hover:grayscale-0 transition">
+                            <p class="text-[10px] uppercase tracking-widest text-emerald-600 font-bold mb-1">Nomor Rekening</p>
+                            <div class="flex items-center justify-between">
+                                <span id="rekBsi" class="text-xl font-bold text-emerald-900 tracking-wider">7123456789</span>
+                                <button onclick="copyText('7123456789')" class="text-emerald-500 hover:text-emerald-700 p-2"><i class="far fa-copy"></i></button>
+                            </div>
+                            <p class="text-xs mt-2 italic text-gray-500 font-medium">a.n Ponpes Alif Alfi Karomah</p>
+                        </div>
+
+                        <div class="p-6 rounded-3xl bg-blue-50 border border-blue-100 relative group">
+                            <div class="h-6 mb-4 flex items-center font-bold text-blue-800 tracking-tighter">BANK BRI</div>
+                            <p class="text-[10px] uppercase tracking-widest text-blue-600 font-bold mb-1">Nomor Rekening</p>
+                            <div class="flex items-center justify-between">
+                                <span id="rekBri" class="text-xl font-bold text-blue-900 tracking-wider">0123-01-000123-53-0</span>
+                                <button onclick="copyText('0123-01-000123-53-0')" class="text-blue-500 hover:text-blue-700 p-2"><i class="far fa-copy"></i></button>
+                            </div>
+                            <p class="text-xs mt-2 italic text-gray-500 font-medium">a.n Yayasan Alif Alfi Karomah</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARA KONFIRMASI -->
+                <div class="bg-emerald-900 text-white p-8 md:p-12 rounded-custom shadow-2xl relative overflow-hidden">
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-serif font-bold mb-4">Cara Konfirmasi Donasi</h3>
+                        <p class="text-emerald-100/70 mb-8 text-sm">Untuk pencatatan laporan keuangan yang transparan, mohon kirimkan bukti transfer Anda ke admin kami.</p>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="bg-emerald-800/50 p-4 rounded-2xl border border-emerald-700">
+                                <span class="text-gold-500 font-bold block mb-1">Langkah 1</span>
+                                <p class="text-xs">Foto atau screenshot bukti transfer Anda.</p>
+                            </div>
+                            <div class="bg-emerald-800/50 p-4 rounded-2xl border border-emerald-700">
+                                <span class="text-gold-500 font-bold block mb-1">Langkah 2</span>
+                                <p class="text-xs">Klik tombol konfirmasi WhatsApp di bawah.</p>
+                            </div>
+                            <div class="bg-emerald-800/50 p-4 rounded-2xl border border-emerald-700">
+                                <span class="text-gold-500 font-bold block mb-1">Langkah 3</span>
+                                <p class="text-xs">Kirim pesan dan tunggu balasan admin.</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/628123456789?text=Assalamualaikum,%20saya%20ingin%20konfirmasi%20donasi." class="mt-10 inline-flex items-center bg-[#25D366] hover:bg-[#20ba5a] text-white px-8 py-4 rounded-full font-bold transition shadow-lg">
+                            <i class="fab fa-whatsapp text-xl mr-2"></i> Konfirmasi via WhatsApp
+                        </a>
+                    </div>
+                    <i class="fas fa-receipt absolute -right-10 -bottom-10 text-[200px] opacity-10"></i>
+                </div>
+            </div>
+
+            <!-- SIDEBAR INFO -->
+            <div class="space-y-8">
+                <div class="bg-white p-8 rounded-custom card-shadow border border-emerald-50">
+                    <h4 class="font-bold text-emerald-900 mb-4 flex items-center">
+                        <i class="fas fa-info-circle text-emerald-500 mr-2"></i> Transparansi
+                    </h4>
+                    <p class="text-sm text-gray-500 leading-relaxed mb-6">
+                        Laporan penggunaan dana donasi akan diperbarui secara berkala di halaman monitoring dan papan pengumuman pondok.
+                    </p>
+                    <a href="monitoring.html" class="text-emerald-600 text-sm font-bold hover:underline">Lihat Laporan Keuangan &rarr;</a>
+                </div>
+
+                <div class="bg-gold-500/5 p-8 rounded-custom border border-gold-500/20 text-center">
+                    <div class="w-16 h-16 bg-gold-500 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl shadow-lg shadow-gold-500/20">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="text-emerald-900 italic text-sm leading-relaxed mb-4">
+                        "Sedekah itu tidak akan mengurangi harta. Allah akan menggantinya dengan keberkahan."
+                    </p>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-600">— Pesan Pengasuh</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white py-12 border-t border-emerald-50">
+        <div class="max-w-6xl mx-auto px-6 text-center text-gray-400 text-xs">
+            <p>&copy; 2026 Yayasan Ponpes Alif Alfi Karomah. Semoga menjadi amal jariyah yang tak terputus.</p>
+        </div>
+    </footer>
+
+    <script>
+        function copyText(text) {
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            
+            // Notifikasi sederhana (opsional bisa diganti modal)
+            alert("Nomor rekening berhasil disalin: " + text);
+        }
+    </script>
+
+</body>
+</html>

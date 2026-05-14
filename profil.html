@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Pesantren | Ponpes Alif Alfi Karomah</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            50: '#f0fdf4',
+                            500: '#10b981',
+                            600: '#059669',
+                            900: '#064e3b',
+                        },
+                        gold: {
+                            500: '#D4AF37',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #f8fafc; }
+        .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); }
+        .rounded-custom { border-radius: 2.5rem; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.05); }
+        .profile-hero {
+            background: linear-gradient(rgba(6, 78, 59, 0.8), rgba(6, 78, 59, 0.9)), url('img/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="text-emerald-900">
+
+    <!-- NAVBAR -->
+    <nav class="glass-nav sticky top-0 z-50 border-b border-emerald-100">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-lg border-2 border-gold-500 flex items-center justify-center bg-white overflow-hidden shadow-sm">
+                    <img src="img/logo.png" alt="Logo" class="w-full h-full object-contain" onerror="this.src='https://ui-avatars.com/api/?name=Alif+Alfi&background=064e3b&color=fff'">
+                </div>
+                <h1 class="font-serif font-bold text-lg leading-none hidden sm:block">ALIF ALFI KAROMAH</h1>
+            </div>
+            <div class="flex items-center space-x-6 font-semibold text-sm">
+                <a href="index.html" class="hover:text-emerald-600 transition">Beranda</a>
+                <a href="profil.html" class="text-emerald-600 border-b-2 border-emerald-600 pb-1">Profil</a>
+                <a href="monitoring.html" class="hover:text-emerald-500 transition">Monitoring</a>
+                <a href="donasi.html" class="bg-emerald-600 text-white px-5 py-2 rounded-full shadow-md hover:bg-emerald-700 transition">Donasi</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO PROFIL -->
+    <header class="profile-hero py-24 text-white text-center px-6">
+        <div class="max-w-4xl mx-auto">
+            <span class="text-emerald-300 font-bold tracking-[0.4em] uppercase text-xs mb-4 block">Mengenal Lebih Dekat</span>
+            <h2 class="text-4xl md:text-6xl font-serif font-bold mb-6">Sejarah & Perjuangan Kami</h2>
+            <div class="w-24 h-1 bg-gold-500 mx-auto rounded-full"></div>
+        </div>
+    </header>
+
+    <!-- SEJARAH SECTION -->
+    <section class="py-20 px-6 max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="aspect-[4/5] rounded-custom overflow-hidden shadow-2xl">
+                    <img src="img/pengasuh.jpg" alt="Foto Pengasuh" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1590076214667-c0f302480614?auto=format&fit=crop&q=80&w=800'">
+                </div>
+                <!-- Ornamen Emas -->
+                <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-gold-500/10 rounded-full blur-3xl -z-10"></div>
+            </div>
+            <div>
+                <h3 class="text-3xl font-serif font-bold mb-6">Awal Mula Berdiri</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Pondok Pesantren Tahfidz Alif Alfi Karomah didirikan atas dasar kepedulian yang mendalam terhadap anak-anak yatim dan dhu'afa yang memiliki semangat tinggi untuk menghafal Al-Qur'an namun terkendala biaya.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    Berawal dari sebuah gubuk sederhana, kini kami terus berkembang menjadi wadah pendidikan yang representatif dengan dukungan para muhsinin. Fokus kami tidak hanya pada kuantitas hafalan, tetapi juga pada kemandirian karakter dan adab.
+                </p>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="border-l-4 border-emerald-500 pl-4 py-2">
+                        <span class="block text-2xl font-bold text-emerald-900">2015</span>
+                        <span class="text-xs text-gray-500 uppercase tracking-wider">Tahun Berdiri</span>
+                    </div>
+                    <div class="border-l-4 border-gold-500 pl-4 py-2">
+                        <span class="block text-2xl font-bold text-emerald-900">100+</span>
+                        <span class="text-xs text-gray-500 uppercase tracking-wider">Santri Lulus</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISI MISI -->
+    <section class="bg-emerald-900 py-24 px-6 text-white overflow-hidden relative">
+        <!-- Dekorasi Background -->
+        <i class="fas fa-quran absolute -right-20 -top-10 text-[300px] opacity-5 rotate-12"></i>
+        
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="grid md:grid-cols-2 gap-20">
+                <div>
+                    <h3 class="text-gold-500 font-bold uppercase tracking-widest text-sm mb-4">Visi Kami</h3>
+                    <p class="text-3xl md:text-4xl font-serif leading-tight">
+                        "Mencetak Generasi Qur'ani yang Hafidz, Alim, Mandiri, dan Berakhlakul Karimah."
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-gold-500 font-bold uppercase tracking-widest text-sm mb-4">Misi Kami</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <span class="bg-emerald-800 text-gold-500 w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mr-4 font-bold">1</span>
+                            <p class="text-emerald-100/90 text-sm leading-relaxed">Menyelenggarakan pendidikan Tahfidz Al-Qur'an dengan metode yang intensif dan berstandar sanad.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-emerald-800 text-gold-500 w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mr-4 font-bold">2</span>
+                            <p class="text-emerald-100/90 text-sm leading-relaxed">Mendidik santri dalam pemahaman kitab-kitab turats untuk membekali ilmu syar'i yang mendalam.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-emerald-800 text-gold-500 w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mr-4 font-bold">3</span>
+                            <p class="text-emerald-100/90 text-sm leading-relaxed">Memberikan ruang berekspresi dan pelatihan kemandirian bagi santri yatim dhu'afa agar siap terjun ke masyarakat.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STRUKTUR PENGURUS -->
+    <section class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h3 class="text-3xl font-serif font-bold text-emerald-900">Struktur Pengurus</h3>
+            <p class="text-gray-500 mt-2">Amanah dan dedikasi di balik operasional pondok.</p>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <!-- Pengurus 1 -->
+            <div class="group">
+                <div class="aspect-square bg-emerald-100 rounded-custom mb-4 overflow-hidden card-shadow">
+                    <img src="https://ui-avatars.com/api/?name=Ustadz+Fulan&background=10b981&color=fff" alt="Pengurus" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                </div>
+                <h4 class="font-bold text-emerald-900">KH. Ahmad Fathoni</h4>
+                <p class="text-xs text-emerald-500 uppercase font-semibold">Pengasuh Utama</p>
+            </div>
+            <!-- Pengurus 2 -->
+            <div class="group">
+                <div class="aspect-square bg-emerald-100 rounded-custom mb-4 overflow-hidden card-shadow">
+                    <img src="https://ui-avatars.com/api/?name=Ustadz+B&background=10b981&color=fff" alt="Pengurus" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                </div>
+                <h4 class="font-bold text-emerald-900">Ust. Syahrul Ramadhan</h4>
+                <p class="text-xs text-emerald-500 uppercase font-semibold">Ketua Yayasan</p>
+            </div>
+            <!-- Pengurus 3 -->
+            <div class="group">
+                <div class="aspect-square bg-emerald-100 rounded-custom mb-4 overflow-hidden card-shadow">
+                    <img src="https://ui-avatars.com/api/?name=Ustadz+C&background=10b981&color=fff" alt="Pengurus" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                </div>
+                <h4 class="font-bold text-emerald-900">Usth. Siti Aisyah</h4>
+                <p class="text-xs text-emerald-500 uppercase font-semibold">Bendahara</p>
+            </div>
+            <!-- Pengurus 4 -->
+            <div class="group">
+                <div class="aspect-square bg-emerald-100 rounded-custom mb-4 overflow-hidden card-shadow">
+                    <img src="https://ui-avatars.com/api/?name=Ustadz+D&background=10b981&color=fff" alt="Pengurus" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                </div>
+                <h4 class="font-bold text-emerald-900">Ust. Ali Murtadho</h4>
+                <p class="text-xs text-emerald-500 uppercase font-semibold">Sekretaris</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white py-12 border-t border-emerald-50">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-gray-400 text-xs">&copy; 2026 Yayasan Ponpes Alif Alfi Karomah. Berkhidmat untuk Ummat.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

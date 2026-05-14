@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoring Hafalan Santri | Ponpes Alif Alfi Karomah</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            50: '#f0fdf4',
+                            500: '#10b981',
+                            600: '#059669',
+                            900: '#064e3b',
+                        },
+                        gold: {
+                            500: '#D4AF37',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #f8fafc; }
+        .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); }
+        .rounded-custom { border-radius: 2rem; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.1); }
+        .gradient-bg { background: linear-gradient(135deg, #064e3b 0%, #059669 100%); }
+    </style>
+</head>
+<body class="text-emerald-900">
+
+    <!-- NAVBAR -->
+    <nav class="glass-nav sticky top-0 z-50 border-b border-emerald-100">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-lg border-2 border-gold-500 flex items-center justify-center bg-white overflow-hidden">
+                    <img src="img/logo.png" alt="Logo" class="w-full h-full object-contain" onerror="this.src='https://ui-avatars.com/api/?name=Alif+Alfi&background=064e3b&color=fff'">
+                </div>
+                <h1 class="font-serif font-bold text-lg leading-none hidden sm:block">ALIF ALFI KAROMAH</h1>
+            </div>
+            <div class="flex items-center space-x-6 font-semibold text-sm">
+                <a href="index.html" class="hover:text-emerald-600 transition">Beranda</a>
+                <a href="profil.html" class="hover:text-emerald-500 transition">Profil</a>
+                <a href="monitoring.html" class="text-emerald-600">Monitoring</a>
+                <a href="donasi.html" class="bg-emerald-600 text-white px-5 py-2 rounded-full shadow-md">Donasi</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER SECTION -->
+    <header class="gradient-bg py-16 text-white text-center px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-serif font-bold mb-4">Monitoring Progres Hafalan</h2>
+            <p class="text-emerald-100 opacity-90 max-w-2xl mx-auto font-light">
+                Masukkan Nomor Induk Santri (NIS) untuk melihat riwayat setoran, jumlah juz, dan capaian hafalan putra-putri Anda.
+            </p>
+        </div>
+    </header>
+
+    <!-- SEARCH SECTION -->
+    <section class="max-w-xl mx-auto px-6 -mt-8">
+        <div class="bg-white p-2 rounded-full shadow-2xl flex items-center border border-emerald-100">
+            <input type="text" id="nisInput" placeholder="Masukkan NIS Santri (Contoh: 2024001)" class="w-full px-6 py-3 rounded-full focus:outline-none text-emerald-900 font-medium">
+            <button onclick="cariSantri()" class="bg-emerald-600 hover:bg-emerald-700 text-white w-12 h-12 rounded-full flex items-center justify-center transition shadow-lg">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- RESULT SECTION (Hidden by default) -->
+    <main id="resultArea" class="max-w-4xl mx-auto px-6 py-12 hidden">
+        <!-- Informasi Santri Card -->
+        <div class="bg-white rounded-custom p-8 card-shadow border border-emerald-50 mb-8 flex flex-col md:flex-row items-center gap-8">
+            <div class="w-32 h-32 rounded-3xl bg-emerald-50 flex items-center justify-center text-5xl text-emerald-300 border-2 border-dashed border-emerald-200">
+                <i class="fas fa-user-graduate"></i>
+            </div>
+            <div class="text-center md:text-left flex-1">
+                <h3 id="namaSantri" class="text-2xl font-bold text-emerald-900 mb-1 italic text-gray-500">Nama Santri Muncul Di Sini</h3>
+                <p id="nisTampil" class="text-emerald-600 font-mono mb-4 italic">NIS: --------</p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                    <span class="bg-emerald-50 text-emerald-700 px-4 py-1 rounded-full text-xs font-bold border border-emerald-100">
+                        <i class="fas fa-check-circle mr-1"></i> Aktif
+                    </span>
+                    <span class="bg-gold-500/10 text-gold-600 px-4 py-1 rounded-full text-xs font-bold border border-gold-500/20">
+                        <i class="fas fa-star mr-1"></i> Kelas Tahfidz A
+                    </span>
+                </div>
+            </div>
+            <div class="text-center bg-emerald-900 text-white p-6 rounded-3xl w-full md:w-auto">
+                <p class="text-xs uppercase tracking-widest opacity-70 mb-1">Total Hafalan</p>
+                <h4 id="totalJuz" class="text-4xl font-bold">-- <span class="text-sm font-light">Juz</span></h4>
+            </div>
+        </div>
+
+        <!-- Progress Table -->
+        <div class="bg-white rounded-custom overflow-hidden card-shadow border border-emerald-50">
+            <div class="p-6 border-b border-emerald-50 flex justify-between items-center bg-emerald-50/30">
+                <h4 class="font-bold text-emerald-900">Riwayat Setoran Terakhir</h4>
+                <i class="fas fa-history text-emerald-300"></i>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead class="bg-emerald-50/50 text-emerald-800 text-xs uppercase font-bold">
+                        <tr>
+                            <th class="px-6 py-4">Tanggal</th>
+                            <th class="px-6 py-4">Surah / Ayat</th>
+                            <th class="px-6 py-4">Status</th>
+                            <th class="px-6 py-4">Keterangan</th>
+                        </tr>
+                    </thead>
+                    <tbody id="riwayatTabel" class="text-sm text-gray-600 divide-y divide-emerald-50">
+                        <!-- Data riwayat akan diisi oleh JavaScript -->
+                        <tr>
+                            <td colspan="4" class="px-6 py-8 text-center italic text-gray-400">Silakan masukkan NIS untuk memuat data.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- LOADING SPINNER (Hidden) -->
+    <div id="loader" class="py-20 text-center hidden">
+        <div class="inline-block w-8 h-8 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin"></div>
+        <p class="mt-4 text-emerald-600 font-medium italic">Sedang mengambil data dari pusat...</p>
+    </div>
+
+    <!-- FOOTER (Sama dengan index) -->
+    <footer class="bg-white py-10 border-t border-emerald-50 mt-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-gray-400 text-xs">&copy; 2026 Yayasan Ponpes Alif Alfi Karomah. Layanan Monitoring Mandiri Santri.</p>
+        </div>
+    </footer>
+
+    <script>
+        function cariSantri() {
+            const nis = document.getElementById('nisInput').value;
+            const resultArea = document.getElementById('resultArea');
+            const loader = document.getElementById('loader');
+
+            if(!nis) {
+                alert("Mohon masukkan nomor NIS terlebih dahulu");
+                return;
+            }
+
+            // Simulasi proses loading
+            resultArea.classList.add('hidden');
+            loader.classList.remove('hidden');
+
+            setTimeout(() => {
+                loader.classList.add('hidden');
+                resultArea.classList.remove('hidden');
+                
+                // Ini adalah tempat kita nanti menghubungkan ke Google Sheets API
+                // Untuk sementara kita isi data dummy (palsu) sebagai contoh
+                document.getElementById('namaSantri').innerText = "Ahmad Fathoni";
+                document.getElementById('nisTampil').innerText = "NIS: " + nis;
+                document.getElementById('totalJuz').innerHTML = "12 <span class='text-sm font-light'>Juz</span>";
+                
+                const tabel = document.getElementById('riwayatTabel');
+                tabel.innerHTML = `
+                    <tr>
+                        <td class="px-6 py-4 font-medium">12 Mei 2026</td>
+                        <td class="px-6 py-4 text-emerald-700 font-bold">An-Naba (1-20)</td>
+                        <td class="px-6 py-4"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-[10px] font-bold">LANCAR</span></td>
+                        <td class="px-6 py-4">Makhraj diperbaiki pada ayat 15.</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 font-medium">10 Mei 2026</td>
+                        <td class="px-6 py-4 text-emerald-700 font-bold">An-Naziat (Full)</td>
+                        <td class="px-6 py-4"><span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-[10px] font-bold">ULANG</span></td>
+                        <td class="px-6 py-4">Lupa pada pertengahan surah.</td>
+                    </tr>
+                `;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
