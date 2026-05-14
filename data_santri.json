@@ -1,0 +1,101 @@
+{
+"2024001": {
+"nama": "Ahmad Fathoni",
+"juz": 12,
+"kelas": "Tahfidz A",
+"status": "Aktif",
+"riwayat": [
+{"tgl": "12 Mei 2026", "surah": "An-Naba (1-20)", "status": "LANCAR", "ket": "Makhraj diperbaiki pada ayat 15."},
+{"tgl": "10 Mei 2026", "surah": "An-Naziat (Full)", "status": "ULANG", "ket": "Lupa pada pertengahan surah."}
+]
+},
+"2024002": {
+"nama": "Siti Aminah",
+"juz": 30,
+"kelas": "Takhosus",
+"status": "Aktif",
+"riwayat": [
+{"tgl": "14 Mei 2026", "surah": "Al-Baqarah (1-100)", "status": "LANCAR", "ket": "Murojaah sangat baik."},
+{"tgl": "11 Mei 2026", "surah": "An-Nas s/d Al-Ikhlas", "status": "LANCAR", "ket": "Selesai setoran terakhir."}
+]
+},
+"2024003": {
+"nama": "Muhammad Zaki",
+"juz": 5,
+"kelas": "Tahfidz B",
+"status": "Aktif",
+"riwayat": [
+{"tgl": "13 Mei 2026", "surah": "Abasa", "status": "LANCAR", "ket": "Tajwid mantap."},
+{"tgl": "09 Mei 2026", "surah": "At-Takwir", "status": "LANCAR", "ket": "-"}
+]
+},
+"2024004": {
+"nama": "Rizky Ramadhan",
+"juz": 3,
+"kelas": "Tahfidz C",
+"status": "Aktif",
+"riwayat": [
+{"tgl": "12 Mei 2026", "surah": "Al-Inshiqaq", "status": "ULANG", "ket": "Banyak tertukar di ayat akhir."},
+{"tgl": "08 Mei 2026", "surah": "Al-Mutaffifin", "status": "LANCAR", "ket": "Bagus."}
+]
+},
+"2024005": {
+"nama": "Fatimah Azzahra",
+"juz": 15,
+"kelas": "Tahfidz A",
+"status": "Aktif",
+"riwayat": [
+{"tgl": "14 Mei 2026", "surah": "Yasin (1-40)", "status": "LANCAR", "ket": "Irama stabil."},
+{"tgl": "10 Mei 2026", "surah": "Al-Kahfi (1-10)", "status": "LANCAR", "ket": "-"}
+]
+},
+"2024006": {
+"nama": "Ali Murtadho",
+"juz": 8,
+"kelas": "Tahfidz B",
+"status": "Aktif",
+"riwayat": [
+{"tgl": "11 Mei 2026", "surah": "Al-Mulk", "status": "LANCAR", "ket": "Makhrajul huruf jelas."},
+{"tgl": "07 Mei 2026", "surah": "Al-Waqiah", "status": "ULANG", "ket": "Hafalan masih ragu-ragu."}
+]
+},
+"2024007": {
+"nama": "Hasan Basri",
+"juz": 2,
+"kelas": "Tahfidz C",
+"status": "Cuti",
+"riwayat": [
+{"tgl": "01 Mei 2026", "surah": "Al-Ala", "status": "LANCAR", "ket": "Izin pulang kampung."}
+]
+},
+"2024008": {
+"nama": "Zainab",
+"juz": 20,
+"kelas": "Takhosus",
+"status": "Aktif",
+"riwayat": [
+{"tgl": "13 Mei 2026", "surah": "Maryam (Full)", "status": "LANCAR", "ket": "Lancar sekali."},
+{"tgl": "09 Mei 2026", "surah": "Taha (1-50)", "status": "LANCAR", "ket": "Perbaiki mad thobi'i."}
+]
+},
+"2024009": {
+"nama": "Umar bin Khattab",
+"juz": 1,
+"kelas": "Ibtidaiyah",
+"status": "Aktif",
+"riwayat": [
+{"tgl": "14 Mei 2026", "surah": "An-Nasr", "status": "LANCAR", "ket": "Semangat!"},
+{"tgl": "13 Mei 2026", "surah": "Al-Kafirun", "status": "LANCAR", "ket": "-"}
+]
+},
+"2024010": {
+"nama": "Aisyah Humaira",
+"juz": 25,
+"kelas": "Takhosus",
+"status": "Aktif",
+"riwayat": [
+{"tgl": "12 Mei 2026", "surah": "Az-Zumar", "status": "LANCAR", "ket": "Sangat teliti."},
+{"tgl": "08 Mei 2026", "surah": "Sad", "status": "LANCAR", "ket": "Alhamdulillah."}
+]
+}
+}
